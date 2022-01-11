@@ -5,6 +5,7 @@ import Header from './menu/header';
 import Home from './pages/home';
 import Home1 from './pages/home1';
 import Home2 from './pages/home2';
+import Home3 from './pages/home3';
 import Explore from './pages/explore';
 import Explore2 from './pages/explore2';
 import Helpcenter from './pages/helpcenter';
@@ -64,11 +65,12 @@ const app= () => (
     <Header/>
       <PosedRouter>
       <ScrollTop path="/">
-        <Home exact path="/">
+        <Home1 exact path="/">
           <Redirect to="/home" />
-        </Home>
-        <Home1 path="/home1" />
-        <Home2 path="/home2" />
+        </Home1>
+        <Home1 path="/home" />
+        <Home2 path="/game2" />
+        <Home3 path="/game3"/>
         <Explore path="/explore" />
         <Explore2 path="/explore2" />
         <Helpcenter path="/helpcenter" />

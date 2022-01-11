@@ -3,21 +3,9 @@ import { Link } from '@reach/router';
 
 const footer= () => (
   <footer className="footer-light">
-            <div className="container">
+            {/* <div className="container">
                 <div className="row">
-                    <div className="col-md-3 col-sm-6 col-xs-1">
-                        <div className="widget">
-                            <h5>Marketplace</h5>
-                            <ul>
-                                <li><Link to="">All NFTs</Link></li>
-                                <li><Link to="">Art</Link></li>
-                                <li><Link to="">Music</Link></li>
-                                <li><Link to="">Domain Names</Link></li>
-                                <li><Link to="">Virtual World</Link></li>
-                                <li><Link to="">Collectibles</Link></li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                     <div className="col-md-3 col-sm-6 col-xs-1">
                         <div className="widget">
                             <h5>Resources</h5>
@@ -44,25 +32,9 @@ const footer= () => (
                             </ul>
                         </div>
                     </div>
-                    <div className="col-md-3 col-sm-6 col-xs-1">
-                        <div className="widget">
-                            <h5>Newsletter</h5>
-                            <p>Signup for our newsletter to get the latest news in your inbox.</p>
-                            <form action="#" className="row form-dark" id="form_subscribe" method="post" name="form_subscribe">
-                                <div className="col text-center">
-                                    <input className="form-control" id="txt_subscribe" name="txt_subscribe" placeholder="enter your email" type="text" /> 
-                                    <Link to="" id="btn-subscribe">
-                                      <i className="arrow_right bg-color-secondary"></i>
-                                    </Link>
-                                    <div className="clearfix"></div>
-                                </div>
-                            </form>
-                            <div className="spacer-10"></div>
-                            <small>Your email is safe with us. We don't spam.</small>
-                        </div>
-                    </div>
+                    
                 </div>
-            </div>
+            </div> */}
             <div className="subfooter">
                 <div className="container">
                     <div className="row">
@@ -70,7 +42,10 @@ const footer= () => (
                             <div className="de-flex">
                                 <div className="de-flex-col">
                                     <span onClick={()=> window.open("", "_self")}>
-                                        <span className="copy">&copy; Copyright 2021 - Gigaland by Designesia</span>
+                                        <span className="copy"><ul>
+                                            <li><Link to="">Privacy policy</Link></li>
+                                            <li><Link to="">Terms and Conditions</Link></li>
+                                            </ul></span>
                                     </span>
                                 </div>
                                 <div className="de-flex-col">

@@ -232,7 +232,7 @@ export default class Responsive extends Component {
                             {nft.price}<span>{nft.bid}</span>
                         </div>
                         <div className="nft__item_action">
-                            <span onClick={()=> window.open(nft.bidLink, "_self")}>Place a bid</span>
+                            <span onClick={()=> window.open(nft.bidLink, "_self")}>Buy now </span>
                         </div>
                         <div className="nft__item_like">
                             <i className="fa fa-heart"></i><span>{nft.likes}</span>
