@@ -72,18 +72,20 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
+const comingSoon = true;
+
 const game3 = () => (
   <div>
     <GlobalStyles />
-    <section className="contianer" style={{ backgroundImage: `url(${'./img/background/7.jpg'})` }}>
+    <section className="jumbotron no-bg" style={{ backgroundImage: `url(${'./img/background/7.jpg'})` }}>
       <div className='container'>
         <div className='row'>
-        <div className='col-lg-12'>
-          {/* <video controls autoPlay loop height={'90%'} width={'100%'}>
+          <div className='col-lg-12'>
+            {/* <video controls autoPlay loop height={'90%'} width={'100%'}>
             <source src={video} type="video/mp4" />
           </video> */}
-          <h2 className='style-2'>Coming Soon...</h2>
-        </div>
+            <h3 className='style-2'>Coming Soon...</h3>
+          </div>
         </div>
 
       </div>
@@ -93,14 +95,14 @@ const game3 = () => (
       <div className='container'>
         <div className='row'>
           <div className='col-lg-12'>
-            <h2 className='style-2'>New Items</h2>
+            {(comingSoon != true) && <h2 className='style-2'>NFT's</h2>}
           </div>
         </div>
-        <ColumnNew />
+        {(comingSoon != true) && <ColumnNew />}
       </div>
     </section>
 
-    <section className='container no-top'>
+    {/* <section className='container no-top'>
       <div className='row'>
         <div className='col-lg-12'>
           <h2 className='style-2'>Hot Collections</h2>
@@ -113,9 +115,9 @@ const game3 = () => (
           </div>
         </div>
       </div>
-    </section>
+    </section> */}
 
-    <section className='container no-top'>
+    {/* <section className='container no-top'>
       <div className='row'>
         <div className='col-lg-12'>
           <h2 className='style-2'>Top Seller</h2>
@@ -124,9 +126,9 @@ const game3 = () => (
           <AuthorList />
         </div>
       </div>
-    </section>
+    </section> */}
 
-    <section className='container no-top'>
+    {(comingSoon != true) && <section className='container no-top'>
       <div className='row'>
         <div className='col-lg-12'>
           <h2 className='style-2'>Create and sell</h2>
@@ -135,7 +137,7 @@ const game3 = () => (
       <div className='container px-0'>
         <FeatureBox />
       </div>
-    </section>
+    </section>}
 
     <Footer />
 

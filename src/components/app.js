@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Location, Redirect } from '@reach/router';
 import ScrollToTopBtn from './menu/ScrollToTop';
 import Header from './menu/header';
-import Home from './pages/home';
+import BuySell from './components/buySell';
 import Home1 from './pages/home1';
 import Home2 from './pages/home2';
 import Home3 from './pages/home3';
@@ -31,8 +31,10 @@ import Accordion from './pages/accordion';
 import Alerts from './pages/alerts';
 import Progressbar from './pages/progressbar';
 import Tabs from './pages/tabs';
+import ColumnNew from './components/ColumnNew'
 
 import { createGlobalStyle } from 'styled-components';
+import buySell from './components/buySell';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -71,6 +73,8 @@ const app= () => (
         <Home1 path="/home" />
         <Home2 path="/game2" />
         <Home3 path="/game3"/>
+        <ColumnNew path="/others" />
+        <BuySell path="/buySell" />
         <Explore path="/explore" />
         <Explore2 path="/explore2" />
         <Helpcenter path="/helpcenter" />

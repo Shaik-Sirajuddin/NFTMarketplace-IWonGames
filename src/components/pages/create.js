@@ -4,14 +4,18 @@ import Footer from '../components/footer';
 
 export default class Createpage extends Component {
 
+
 constructor() {
     super();
     this.onChange = this.onChange.bind(this);
     this.state = {
       files: [],
     };
+    // var {prepic,setPrePic}=
   }
 
+  
+  
   onChange(e) {
     var files = e.target.files;
     console.log(files);
@@ -46,9 +50,9 @@ render() {
                       <h5>Upload file</h5>
 
                       <div className="d-create-file">
-                          <p id="file_name">PNG, JPG, GIF, WEBP or MP4. Max 200mb.</p>
+                          <p id="file_name">PNG, JPG, GIF, WEBP . Max 200mb.</p>
                           {this.state.files.map(x => 
-                          <p key="{index}">PNG, JPG, GIF, WEBP or MP4. Max 200mb.{x.name}</p>
+                          <p key="{index}">PNG, JPG, GIF, WEBP . Max 200mb.{x.name}</p>
                           )}
                           <div className='browse'>
                             <input type="button" id="get_file" className="btn-main" value="Browse"/>
@@ -74,8 +78,8 @@ render() {
 
                       <div className="spacer-10"></div>
 
-                      {/* <h5>Royalties</h5>
-                      <input type="text" name="item_royalties" id="item_royalties" className="form-control" placeholder="suggested: 0, 10%, 20%, 30%. Maximum is 70%" /> */}
+                      <h5>Category</h5>
+                      <input type="text" name="item_royalties" id="item_royalties" className="form-control" placeholder="suggested: 0, 10%, 20%, 30%. Maximum is 70%" />
 
                       <div className="spacer-10"></div>
 
@@ -87,15 +91,6 @@ render() {
           <div className="col-lg-3 col-sm-6 col-xs-12">
                   <h5>Preview item</h5>
                   <div className="nft__item m-0">
-                      <div className="de_countdown">
-                        <Clock deadline="December, 30, 2021" />
-                      </div>
-                      <div className="author_list_pp">
-                          <span>                                    
-                              <img className="lazy" src="./img/author/author-1.jpg" alt=""/>
-                              <i className="fa fa-check"></i>
-                          </span>
-                      </div>
                       <div className="nft__item_wrap">
                           <span>
                               <img src="./img/collections/coll-item-3.jpg" id="get_file_2" className="lazy nft__item_preview" alt=""/>
@@ -106,14 +101,10 @@ render() {
                               <h4>Pinky Ocean</h4>
                           </span>
                           <div className="nft__item_price">
-                              0.08 ETH<span>1/20</span>
+                              0.08 ETH
                           </div>
-                          <div className="nft__item_action">
-                              <span>Place a bid</span>
-                          </div>
-                          <div className="nft__item_like">
-                              <i className="fa fa-heart"></i><span>50</span>
-                          </div>                            
+                          
+                                                   
                       </div> 
                   </div>
               </div>                                         

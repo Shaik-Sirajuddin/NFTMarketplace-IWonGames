@@ -46,30 +46,15 @@ return (
                         </div>
                         <div className="col-md-6">
                             <div className="item_info">
-                                Auctions ends in 
-                                <div className="de_countdown">
-                                  <Clock deadline="December, 30, 2021" />
-                                </div>
+                               
                                 <h2>{data.title}</h2>
                                 <div className="item_info_counts">
                                     <div className="item_info_type"><i className="fa fa-image"></i>Art</div>
-                                    <div className="item_info_views"><i className="fa fa-eye"></i>250</div>
-                                    <div className="item_info_like"><i className="fa fa-heart"></i>18</div>
+                                    
                                 </div>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 
-                                <h6>Creator</h6>
-                                <div className="item_author">                                    
-                                    <div className="author_list_pp">
-                                        <span>
-                                            <img className="lazy" src={data.authorImg} alt=""/>
-                                            <i className="fa fa-check"></i>
-                                        </span>
-                                    </div>                                    
-                                    <div className="author_list_info">
-                                        <span>Monica Lucas</span>
-                                    </div>
-                                </div>
+                               
 
                                 <div className="spacer-40"></div>
 

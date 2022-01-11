@@ -7,18 +7,7 @@ import { Link } from "@reach/router";
 
 export default class Responsive extends Component {
 
-    dummyData = [{
-        deadline: "December, 30, 2021",
-        authorLink: "ItemDetail",
-        nftLink: "ItemDetail",
-        bidLink: "ItemDetail",
-        authorImg: "./img/author/author-1.jpg",
-        previewImg: "./img/items/static-1.jpg",
-        title: "Pinky Ocean",
-        price: "0.08 ETH",
-        bid: "1/20",
-        likes: 50
-    },
+    dummyData = [
     {
         deadline: "",
         authorLink: "#",
@@ -209,40 +198,38 @@ export default class Responsive extends Component {
             <div className='row'>
                 {this.state.nfts.map((nft, index) => (
                     <div key={index} className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-4">
+                        <Link to='/ItemDetail' state={{ from:nft }}>
                         <div className="nft__item m-0">
-                            {nft.deadline &&
-                                <div className="de_countdown">
-                                    <Clock deadline={nft.deadline} />
-                                </div>
-                            }
-                            <div className="author_list_pp">
+                           
+                            {/* <div className="author_list_pp">
                                 <span onClick={() => window.open(nft.authorLink, "_self")}>
                                     <img className="lazy" src={nft.authorImg} alt="" />
                                     <i className="fa fa-check"></i>
                                 </span>
-                            </div>
+                            </div> */}
                             <div className="nft__item_wrap" style={{ height: `${this.state.height}px` }}>
                                 <span>
                                     <img onLoad={this.onImgLoad} src={nft.previewImg} className="lazy nft__item_preview" alt="" />
                                 </span>
                             </div>
                             <div className="nft__item_info">
-                                <Link to='/ItemDetail' state={{ from:nft }}>
+                                {/* <Link to='/ItemDetail' state={{ from:nft }}>
                                     <span>
                                         <h4>{nft.title}</h4>
                                     </span>
-                                </Link>
+                                </Link> */}
                                 <div className="nft__item_price">
-                                    {nft.price}<span>{nft.bid}</span>
+                                    {nft.price}
                                 </div>
-                                <div className="nft__item_action">
+                                <div className="nft__item_action" style={{"marginBlock":15}}>
                                     <span onClick={() => window.open(nft.bidLink, "_self")}>Buy now </span>
+                                
                                 </div>
-                                <div className="nft__item_like">
-                                    <i className="fa fa-heart"></i><span>{nft.likes}</span>
-                                </div>
+                                
+                                
                             </div>
                         </div>
+                        </Link>
                     </div>
                 ))}
                 {this.state.nfts.length !== this.dummyData.length &&

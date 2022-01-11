@@ -90,14 +90,14 @@ const homethree = () => (
       <div className='container'>
         <div className='row'>
           <div className='col-lg-12'>
-            <h2 className='style-2'>New Items</h2>
+            <h2 className='style-2'>NFT's</h2>
           </div>
         </div>
         <ColumnNew />
       </div>
     </section>
 
-    <section className='container no-top'>
+    {/* <section className='container no-top'>
       <div className='row'>
         <div className='col-lg-12'>
           <h2 className='style-2'>Hot Collections</h2>
@@ -121,7 +121,7 @@ const homethree = () => (
           <AuthorList />
         </div>
       </div>
-    </section>
+    </section> */}
 
     <section className='container no-top'>
       <div className='row'>
