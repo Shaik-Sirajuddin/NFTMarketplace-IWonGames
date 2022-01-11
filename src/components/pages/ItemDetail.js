@@ -3,6 +3,8 @@ import Clock from "../components/Clock";
 import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 
+import { useLocation } from "@reach/router";
+
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {
     background: #212428;
@@ -12,7 +14,11 @@ const GlobalStyles = createGlobalStyle`
 
   
 
-const Colection= function() {
+const Colection= function(props){
+
+// const location = useLocation()
+const data = props.location.state.from;
+console.log(data);
 
 const [openMenu, setOpenMenu] = React.useState(true);
 const [openMenu1, setOpenMenu1] = React.useState(false);
@@ -36,7 +42,7 @@ return (
     <div className='row mt-md-5 pt-md-4'>
 
     <div className="col-md-6 text-center">
-                            <img src="./img/items/big-1.jpg" className="img-fluid img-rounded mb-sm-30" alt=""/>
+                            <img src={data.previewImg} className="img-fluid img-rounded mb-sm-30" alt=""/>
                         </div>
                         <div className="col-md-6">
                             <div className="item_info">
@@ -44,7 +50,7 @@ return (
                                 <div className="de_countdown">
                                   <Clock deadline="December, 30, 2021" />
                                 </div>
-                                <h2>Pinky Ocean</h2>
+                                <h2>{data.title}</h2>
                                 <div className="item_info_counts">
                                     <div className="item_info_type"><i className="fa fa-image"></i>Art</div>
                                     <div className="item_info_views"><i className="fa fa-eye"></i>250</div>
@@ -56,7 +62,7 @@ return (
                                 <div className="item_author">                                    
                                     <div className="author_list_pp">
                                         <span>
-                                            <img className="lazy" src="./img/author/author-1.jpg" alt=""/>
+                                            <img className="lazy" src={data.authorImg} alt=""/>
                                             <i className="fa fa-check"></i>
                                         </span>
                                     </div>                                    
@@ -69,23 +75,23 @@ return (
 
                                 <div className="de_tab">
     
-                                <ul className="de_nav">
+                                {/* <ul className="de_nav">
                                     <li id='Mainbtn' className="active"><span onClick={handleBtnClick}>Bids</span></li>
                                     <li id='Mainbtn1' className=''><span onClick={handleBtnClick1}>History</span></li>
-                                </ul>
+                                </ul> */}
                                 
-                                <div className="de_tab_content">
+                                {/* <div className="de_tab_content">
                                     {openMenu && (  
                                     <div className="tab-1 onStep fadeIn">
                                         <div className="p_list">
                                             <div className="p_list_pp">
                                                 <span>
-                                                    <img className="lazy" src="./img/author/author-1.jpg" alt=""/>
+                                                    <img className="lazy" src={data.authorImg} alt=""/>
                                                     <i className="fa fa-check"></i>
                                                 </span>
                                             </div>                                    
                                             <div className="p_list_info">
-                                                Bid accepted <b>0.005 ETH</b>
+                                                Bid accepted <b>{data.price}</b>
                                                 <span>by <b>Monica Lucas</b> at 6/15/2021, 3:20 AM</span>
                                             </div>
                                         </div>
@@ -200,7 +206,7 @@ return (
                                     </div>
                                     )}
                                     
-                                </div>
+                                </div> */}
                                 
                             </div>
                                 
