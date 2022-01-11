@@ -80,11 +80,11 @@ const game2 = () => (
     <section className="jumbotron no-bg" style={{ backgroundImage: `url(${'./img/background/7.jpg'})` }}>
       <div className='container'>
         <div className='row'>
-          <div className='col-lg-12'>
+          <div className='container'>
             {/* <video controls autoPlay loop height={'90%'} width={'100%'}>
             <source src={video} type="video/mp4" />
           </video> */}
-            <h3 className='style-2'>Coming Soon...</h3>
+            <h3 style={{"font-size" :100,"alignContent":'center'}} >Coming Soon...</h3>
           </div>
         </div>
 

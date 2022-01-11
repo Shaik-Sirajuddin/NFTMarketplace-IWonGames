@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from '@reach/router';
 
 const footer= () => (
-  <footer className="footer-light">
+  <footer className="footer-light" style={{"marginBlock":10,"paddingBlock":10}}>
             {/* <div className="container">
                 <div className="row">
                     
